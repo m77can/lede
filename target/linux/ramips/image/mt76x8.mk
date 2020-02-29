@@ -586,3 +586,11 @@ define Device/zyxel_keenetic-extra-ii
 	check-size $$$$(IMAGE_SIZE) | zyimage -d 6162 -v "ZyXEL Keenetic Extra II"
 endef
 TARGET_DEVICES += zyxel_keenetic-extra-ii
+
+define Device/zero_360-p2
+  IMAGE_SIZE := 15808k
+  DEVICE_VENDOR := ZERO
+  DEVICE_MODEL := 360-P2
+  DEVICE_PACKAGES := kmod-mt76x2 kmod-usb2 kmod-usb-ohci uboot-envtools kmod-usb-ledtrig-usbport
+endef
+TARGET_DEVICES += zero_360-p2
